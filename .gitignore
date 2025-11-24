@@ -1,0 +1,48 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+env/
+env_plotting-1/
+
+# Environment variables
+.env
+*.env
+
+# VS Code settings
+.vscode/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+MANIFEST
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# SQLite databases
+*.sqlite3
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# Installer logs
+pip-log.txt
