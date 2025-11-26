@@ -17,6 +17,7 @@ class Game:
         self.player_finished = False
         self.round_finished = False
         self.round_push = False
+        self.player_split = False
 
     def start_deal(self):
         for _ in range(2):
@@ -174,7 +175,15 @@ class Game:
 
 
         elif action == "sp":
-            pass
+            if self.player.split_hand():
+                #Deal one card to each hand
+                self.player.hand.add_card(self.dealer.draw_card())
+                self.player.split_hands[-1].add_card(self.dealer.draw_card())
+                
+                self.remove_invalid_actions()
+                self.player_split = True
+            else:
+                print("Could not split hand.")
 
         elif action == "dd":
             self.player.dobble_down(self.dealer.draw_card())

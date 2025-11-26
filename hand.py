@@ -10,6 +10,7 @@ class Hand:
         self.is_bust = False
         self.is_blackjack = False
         self.is_twenty_one = False
+
     
     
     def __str__(self):
@@ -39,6 +40,7 @@ class Hand:
 
     def first_card(self):
         return self._cards[0]
+    
 
     @property
     def value(self):
